@@ -1,0 +1,45 @@
+body {
+    background-image: linear-gradient(45deg, #77d0cf, #75b3cf, #afd9d5, #d5d8d7, #a7c6d2, );
+}
+
+.rounded-top{
+    background-color: rgb(245, 241, 245); 
+    height:200px;
+}
+
+.about{
+    padding: 10% 0% 0% 5%;
+}
+
+.about-info{
+    padding: 0% 0% 0% 3%;
+}
+
+.posts{
+    padding: 0% 0% 5% 5%;
+}
+
+.pics{
+    padding: 0% 3% 0% 0%;
+    width: 25%;
+}
+
+.post-button{
+    padding: 0% 0% 5% 4%;
+}
+
+
+.navbar-brand{
+    padding-right: 0;
+    margin: 0%;
+    width: 20%;
+}
+
+.search-bar{
+    padding: 0.5% 2% 0% 0%;
+    width: 20%;
+    color: grey;
+    border-color: grey;
+    --input-border-color:var(--fa-grey);
+    --input-with-icon-color:var(--fa-grey);
+}

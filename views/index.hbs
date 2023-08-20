@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/index.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Xplore</title>
+</head>
+
+<body>
+    <nav>
+        <img src="images/logo.png" alt="">
+    </nav>
+    <div class="row main">
+        <div class="col col-lg-6 left-half" style="padding: 10% 0% 0% 0%">
+            <div class="row heading">
+                <h3>EXPERIENCE</h3><br>
+                <h1>TRAVELLING</h1>
+            </div>
+            <div class="row down-row">
+                <div class="col">
+                    <a class="px-4" href="./signup1.html"><button type="button" class="btn btn-outline-dark">Sign
+                            up</button></a>
+                    <a class="px-4" href="./login1.html"><button type="button" class="btn btn-outline-dark">Sign
+                            In</button></a>
+                </div>
+            </div>
+        </div>
+        <div class="col col-lg-6 right-half show">
+            <img src="images/globe.png" style="width: 90%;">
+        </div>
+    </div>
+
+    <div class="heading">
+    <h1>Welcome to all the travel lovers!</h1>
+    <p class="text">Get started with <strong>Xplore</strong> by uploading your reviews</p>
+</div>
+<div class="row">
+    <div class="column direction col-lg-4">
+        <img src="images/direction.png" alt="photo" width="300px" height="400px">
+    </div>
+    <div class="column2 col-lg-8">
+        <h2>Exploring Xplore</h2>
+        <p class="text1">We give our users a platform to share their travel experiences by</p>
+        <p class="text1">enabling them to post reviews of the places they visit along with </p>
+        <p class="text1">images, video uploads, ratings, various descriptions and many more...</p>
+        <p class="text2">Also the users can like, comment & rate other reviews!</p>
+    </div>
+</div>
+
+    {{!-- <div class="heading">
+        <h1 class="headingT">Welcome to all the travel lovers!</h1>
+        <p class="text headingT">Get started with <strong>Xplore</strong> by uploading your reviews</p>
+    </div>
+    <div class="row">
+        <div class="column direction col-lg-4">
+            <img src="
+            images/direction.png" alt="photo" width="300px" height="400px">
+        </div>
+        <div class="column2 col-lg-8">
+            <h2>Exploring Xplore</h2>
+            <p class="text1">We give our users a platform to share their travel experiences by</p>
+            <p class="text1">enabling them to post reviews of the places they visit along with </p>
+            <p class="text1">images, video uploads, ratings, various descriptions and many more...</p>
+            <p class="text2">Also the users can like, comment & rate other reviews!</p>
+        </div>
+    </div> --}}
+    <div class="middle-container">
+        <h2>Top Reviews</h2>
+        <div class="row">
+            {{#each info}}
+                <div class="cards col-lg-4 col-md-12">
+                    <div class="card h-100">
+                        <img src="{{ image }}" class="card-img-top" alt="1-top" style="height: 200px; z-index: 1">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ place }}</h5>
+                             {{!-- <h5 class="card-title">{{ city }},{{state}},{{country}}</h5>
+                            Rating: {{rating}}<span class="fa fa-star checked"></span>/5 --}}
+                            <h5 class="card-title">{{ city }}</h5>
+                            Rating: {{rating}}<span class="fa fa-star checked"></span>/5
+                            {{!-- <form action="/postview" method="post">
+                                <input type="hidden" name="pid" value="{{ pid }}">
+                                <input class="btn p-4" type="submit" value="view">
+                            </form> --}}
+                        </div>
+                    </div>
+
+                </div>
+            {{/each}}
+
+        </div>
+    </div>
+
+    <div class="bottom-container">
+        <h2>Other Places to visit</h2>
+        <div>
+            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="slideshow row">
+                            <div class="other-place-img col-lg-6">
+                                <img src="../images/dalLake.png" class="d-block w-100" alt="dallake">
+                            </div>
+                            <div class="other-place-about col-lg-6">
+                                <h4>Dal Lake, Srinagar</h4>
+                                <p>Staying on a houseboat in the Dal Lake is a beautiful experience. The serenity of the
+                                    waters surrounding you, in the lake nestled between the hills, watching the sunrise
+                                    and sunset, and the still waters with lights shimmering after sunset is just
+                                    fantastic. Taking a slow shikara ride around is so peaceful !! Everything is
+                                    available on the shikaras, from artifacts and souvenirs to food !</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="slideshow row">
+                            <div class="other-place-img col-lg-6">
+                                <img src="../images/Nusa-Penida.jpg" class="d-block w-100" alt="dallake">
+                            </div>
+                            <div class="other-place-about col-lg-6">
+                                <h4>Nusa Peinda, Bali</h4>
+                                <p>Nusa Penida Island offers an enchanting escape in the Indonesian archipelago. Penida promises an adventurous experience. Be prepared for bumpy 
+                                    rides as you explore its stunning viewpoints like Kelingking Beach, where the towering cliffs 
+                                    meet turquoise waters. Angel's Billabong and Broken Beach showcase nature's artistry, while 
+                                    Crystal Bay beckons with clear waters for snorkeling and diving. The island's natural wonders, 
+                                    such as Peguyangan Waterfall and Atuh Beach.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="slideshow row">
+                            <div class="other-place-img col-lg-6">
+                                <img src="../images/Ytri-Tunga.jpg" class="d-block w-100" alt="dallake">
+                            </div>
+                            <div class="other-place-about col-lg-6">
+                                <h4>Ytri-Tunga, Iceland </h4>
+                                <p>The Aurora Borealis is a natural phenomenon where colorful lights dance across 
+                                    the night sky in polar regions, caused by charged particles from the sun interacting 
+                                    with the Earth's atmosphere. Ytri-Tunga is indeed a location where the Aurora Borealis 
+                                    can be observed, it sounds like a fantastic opportunity to witness this breathtaking 
+                                    natural display. Visiting during the winter months and being in areas with minimal light pollution are often recommended.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="row">
+            <div class="about col-lg-6">
+                <p>Connect us</p>
+                <p style="font-size: 0.75rem;"><i class="fa-regular fa-copyright"></i>2022.Xplore, Inc. Terms. Privacy
+                </p>
+            </div>
+            <div class="info col-lg-6">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <ul style="list-style: none;">
+                            <h4>Main office</h4>
+                            <li>1234</li>
+                            <li>Mangalore</li>
+                            <li>India</li>
+                            <li>(123) 4567890</li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-6">
+                        <ul style="list-style: none;">
+                            <h4>Social Media</h4>
+                            <li><i class="fa-brands fa-instagram"></i> Instagram</li>
+                            <li><i class="fa-brands fa-facebook"></i> Facebook</li>
+                            <li><i class="fa-brands fa-twitter"></i> Twitter</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+    crossorigin="anonymous"></script>
+
+</html>

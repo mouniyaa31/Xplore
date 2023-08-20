@@ -1,0 +1,115 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+.navbar {
+    background-color: #80dff0;
+    flex: 0 0 100%;
+    width: auto;
+}
+
+.nav-item {
+    margin: 0 1em 0 1em;
+    font-size: 0.9em;
+}
+
+
+.bold {
+    font-weight: 700;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+.semi-bold {
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.post{
+    padding:8% 10% 8% 25%; 
+}
+.resume {
+    width: 800px;
+    height: auto;
+    display: flex;
+    /* margin: 50px auto; */
+}
+
+.resume .resume_left {
+    width: 280px;
+    background: #f7f9fb;
+}
+
+.resume .resume_left .resume_profile {
+    width: 100%;
+    height: 280px;
+}
+
+.resume .resume_left .resume_profile img {
+    width: 80%;
+    height: 80%;
+    margin: 2em;
+}
+
+.resume .resume_left .resume_content {
+    padding: 0 3em;
+}
+
+.resume .title {
+    /* margin-bottom: 20px; */
+}
+
+.resume .resume_left ul li .icon {
+    width: 35px;
+    height: 35px;
+    background: #fff;
+    color: #0bb5f4;
+    border-radius: 50%;
+    margin-right: 15px;
+    font-size: 16px;
+    position: relative;
+}
+
+.resume .resume_right {
+    width: 520px;
+    background: #fff;
+    padding: 25px;
+}
+
+.resume .resume_right .bold {
+    color: #1b1d1e;
+}
+
+.resume .resume_right .resume_work ul {
+    padding-left: 40px;
+    overflow: hidden;
+}
+
+.resume .resume_right .resume_work ul li:before {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: -25px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    border: 2px solid #0bb5f4;
+}
+
+.resume .resume_right .resume_work ul li:after {
+    content: "";
+    position: absolute;
+    top: 14px;
+    left: -21px;
+    width: 2px;
+    height: 115px;
+    background: #c4cccf;
+}
+
+.btn{
+    float:right;
+    font-size: large;
+    background-color:#39b6f9;
+}

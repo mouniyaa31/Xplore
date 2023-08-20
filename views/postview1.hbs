@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js">
+
+    <!-- For navbar collapse -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/postview1.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg" style="background-color: #77d0cf;">
+        <a href="homepage.html"><img src="images/final.png" alt="" class="logo"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03"
+            aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+            <div class="col-lg-12">
+                <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                    <li class="nav-item">
+                        <a href="book.html"><img src="images/main2.png" alt="" class="logo"></a>
+                    </li>
+                    <li class="nav-item">
+                        <button class="nav-link" style="background-color:#77d0cf" href="FEED">FEED</button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="nav-link active" style="background-color:#77d0cf" href="PROFILE">PROFILE</button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="nav-link" style="background-color:#77d0cf" href="contact.html">CONTACT US</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div id="middle-container" style="background-image: linear-gradient(135deg, #70e4df, #78e1df, #8ae4df,#85e6df,#94e4e0,#a7dde1,#aedae1,#b7e0e1,#c0e0e2,
+                            #cae2e3,#d6e5e3,#e1e0e3,#e9e1e3,#efe5e3,#f5e9e2,#fdece3)">
+        <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+        <div class="post">
+        {{#each info}}
+        <div class="resume">
+            <div class="resume_left">
+                <div class="resume_profile">
+                    <img src="{{ image }}" alt="profile_pic">
+                </div>
+
+                <div class="resume_content">
+                    <div class="resume_item resume_info">
+                        <div class="title">
+                            <p class="bold">{{place}}</p>
+                            <p class="regular">{{city}}, {{state}}, {{country}}</p>
+                            <p class="regular">Budget : {{budget}}</p>
+                            <p class="regular">Rating : {{rating}}/5</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="resume_right" style="background-color:transparent;">
+                <div class="resume_item resume_work">
+                    <div class="title">
+                        <p class="bold">{{username}}</p>
+                        {{ description }}
+                    </div>
+                    <form action="/feed" method="post" style="padding:5% 70% 0% 0%;">
+                        <button class="btn" style="background-color:#77d0cf;" href="FEED">Browse Posts</button>
+                    </form>
+                </div>
+                
+            </div>
+        </div>
+        {{/each}}
+        </div>
+    </div>
+    <!-- Footer -->
+    <footer class="text-center text-lg-start bg-white text-muted">
+        <section class="">
+            <div class="container text-center text-md-start mt-5">
+                <!-- Grid row -->
+                <div class="row mt-3">
+                    <!-- Grid column -->
+                    <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                        <!-- Content -->
+                        <h6 class="text-uppercase fw-bold mb-4">
+                            <i class="fas fa-gem me-3 text-secondary"></i>XPLORE
+                        </h6>
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                        <!-- Links -->
+                        <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+                       
+                        <p>
+                            <i class="fa fa-envelope me-3 text-secondary"></i>
+                            xplore3000@gmail.com
+                        </p>
+                        <p><i class="fa fa-phone me-3 text-secondary"></i> +91 7338527643</p>
+                        
+                    </div>
+                    <!-- Grid column -->
+                </div>
+                <!-- Grid row -->
+            </div>
+        </section>
+        <!-- Section: Links  -->
+
+        <!-- Copyright -->
+        <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.025);">
+            © 2022 Copyright
+        </div>
+        <!-- Copyright -->
+    </footer>
+    <!-- Footer -->
+
+</body>
+
+</html>

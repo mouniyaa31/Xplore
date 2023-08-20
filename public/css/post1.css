@@ -1,0 +1,26 @@
+body {
+    background-image: linear-gradient(45deg, #77d0cf, #75b3cf, #afd9d5, #d5d8d7, #a7c6d2, );
+}
+
+@media (min-width: 1025px) {
+    .h-custom {
+    height: 100vh !important;
+    }
+    } 
+
+.navbar-brand{
+    padding-right: 0;
+    margin: 0%;
+    width: 20%;
+}
+
+.search-bar{
+    padding: 0.5% 2% 0% 0%;
+    width: 20%;
+    color: grey;
+    border-color: grey;
+    --input-border-color:var(--fa-grey);
+    --input-with-icon-color:var(--fa-grey);
+}
+
+.buttonHolder{ text-align: center; }
